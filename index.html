@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Евклид - проектные системы</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
@@ -64,13 +65,13 @@
         <h2 id="about-us" class="section__title">О&nbsp;нас</h2>
 
         <p class="section__descr">
-          Также как перспективное планирование создаёт необходимость включения в&nbsp;производственный план целого ряда
-          внеочередных мероприятий с&nbsp;учётом комплекса экспериментов, поражающих по&nbsp;своей масштабности
-          и&nbsp;грандиозности. А&nbsp;также диаграммы связей могут быть описаны максимально подробно. Мы&nbsp;вынуждены
-          отталкиваться от&nbsp;того, что убеждённость некоторых оппонентов требует от&nbsp;нас анализа
-          как&nbsp;самодостаточных, так и&nbsp;внешне зависимых концептуальных решений! Следует отметить, что
+          Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда
+          внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности
+          и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены
+          отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа
+          как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что
           высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых
-          участниками в&nbsp;отношении поставленных задач. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что
+          участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что
           высококачественный прототип будущего проекта способствует повышению качества экспериментов.
         </p>
 
@@ -79,11 +80,20 @@
             <div class="about-us__content">
               <p class="about-us__descr">
                 Принимая во&nbsp;внимание показатели успешности, перспективное планирование способствует подготовке
-                и&nbsp;реализации новых принципов
+                и реализации новых&nbsp;принципов
               </p>
 
               <button class="btn btn_transparent">Подробнее</button>
             </div>
+          </div>
+
+          <div class="about-us__content_mobile">
+            <p class="about-us__descr">
+              Принимая во&nbsp;внимание показатели успешности, перспективное планирование способствует подготовке
+              и реализации новых&nbsp;принципов
+            </p>
+
+            <button class="btn btn_transparent">Подробнее</button>
           </div>
 
           <div class="about-us__right">
@@ -122,7 +132,7 @@
             <p class="section__descr">
               Влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации приоритизации разума над&nbsp;эмоциями.
               В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут
-              объективно рассмотрены соответствующими инстанциями.<br>
+              объективно рассмотрены соответствующими инстанциями.<br class="br">
               А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически,
               ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные
               с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
@@ -223,15 +233,15 @@
           <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form">
             <h2 class="form__title" id="submit-your-application">Оставить заявку</h2>
 
-            <input class="form__input" type="text" name="full-name" placeholder="Фамилия, имя и отчество*" required>
-            <input class="form__input" type="email" name="email" placeholder="Email*" required>
+            <input class="form__input" type="text" name="full-name" placeholder="Фамилия, имя и отчество*" required autocomplete="name">
+            <input class="form__input" type="email" name="email" placeholder="Email*" required autocomplete="email">
             <textarea class="form__textarea" name="message" placeholder="Сообщение"></textarea>
 
             <div class="form__btns">
               <button class="btn btn_long" type="submit">Отправить данные</button>
 
               <label class="form__label">
-                <input class="custom-checkbox" type="checkbox" required>
+                <input class="custom-checkbox" type="checkbox" name="consent" required>
                 <span class="form__consent">Согласен на обработку данных</span>
               </label>
             </div>

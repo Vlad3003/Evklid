@@ -60,6 +60,10 @@ html {
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -78,7 +82,7 @@ img {
 .page {
   min-width: 320px;
   background-color: var(--color-light);
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -112,11 +116,6 @@ img {
 .header__logo {
   margin-right: auto;
 }
-
-/* .search svg {
-  fill: black;
-  stroke: var(--color-dark);
-} */
 
 .search {
   width: 24px;
@@ -264,6 +263,8 @@ img {
 }
 
 .hero__wrapper {
+  display: flex;
+  flex-direction: column;
   max-width: 837px;
 }
 
@@ -288,7 +289,7 @@ img {
 .btn_wide {
   padding: 25px 39px;
   font-size: 23px;
-  min-width: 280px;
+  max-width: 280px;
   min-height: 78px;
 }
 
@@ -297,7 +298,6 @@ img {
   margin-bottom: 20px;
   font-size: 48px;
   font-weight: 400;
-  /* letter-spacing: -1px; */
   color: var(--color-dark);
 }
 
@@ -317,6 +317,10 @@ img {
 
 .about-us {
   margin-bottom: 103px;
+}
+
+.about-us__content_mobile {
+  display: none;
 }
 
 .about-us__wrapper {
@@ -355,7 +359,7 @@ img {
   border: 3px solid var(--color-orange);
   padding: 18px 35px;
   background-color: transparent;
-  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .about-us__headline {
@@ -418,6 +422,7 @@ img {
 
 .stages__wrapper {
   --ofsets: 1;
+  --gap-stages: 32px;
   display: flex;
   justify-content: space-between;
 }
@@ -452,13 +457,13 @@ img {
 }
 
 .stages__left {
-  width: calc((100% - var(--gap) * var(--ofsets)) / (var(--ofsets) + 1));
+  width: calc((100% - var(--gap-stages) * var(--ofsets)) / (var(--ofsets) + 1));
 }
 
 .stages__right {
   margin-top: 10px;
   border-radius: 30px;
-  width: calc((100% - var(--gap) * var(--ofsets)) / (var(--ofsets) + 1));
+  width: calc((100% - var(--gap-stages) * var(--ofsets)) / (var(--ofsets) + 1));
   background-image: url("../img/stages-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -513,7 +518,6 @@ img {
   --ofsets: 2;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   gap: var(--gap);
 }
 
@@ -571,6 +575,7 @@ img {
 }
 
 .footer__descr {
+  margin: 0;
   max-width: 363px;
   font-size: 16px;
   line-height: 32px;
@@ -679,9 +684,10 @@ img {
 
 .form__consent {
   position: relative;
+  display: flex;
+  justify-content: center;
   padding-left: 18px;
   font-size: 16px;
-  line-height: 32px;
   color: var(--color-gray-light);
 }
 
